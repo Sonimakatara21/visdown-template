@@ -19,28 +19,36 @@
   </style>  
 </head>
 <body>
+<P>ufiduhoeruhfiue
 
 <div id="visdown-input">  
   
-# Bar Plot
-  
+# Distribution
+
+## Dot Plot
+
 ```vis
-data: 
+width: 600
+height: 200
+data:
   url: data/cars.csv
-mark: point
-encoding:
+mark: bar
+encoding: 
   x: 
-    field: kmpl
-    type: Q
-  y:   
+    aggregate: mean
     field: price
     type: Q
-  color:
-    field: type
-    type: N
+  y:
+    field: brand
+    type: nominal
   size:
-    field: bhp
+    value: 25
+  opacity:
+    value: 0.3
+  color: 
+    field: price
     type: Q
+
 ```
     
 </div>
